@@ -1,0 +1,13 @@
+electronpm
+build/
+*.o
+
+*.swp
+*.swo
+*.tmp
+.vscode/
+.idea/
+
+*.log
+
+.DS_store
