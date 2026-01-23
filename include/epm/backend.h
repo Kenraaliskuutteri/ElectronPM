@@ -6,8 +6,7 @@ typedef enum {
     EPM_DISTRO_ARCH,
     EPM_DISTRO_DEBIAN,
     EPM_DISTRO_FEDORA,
-    EPM_DISTRO_OPENSUSE,
-    EPM_DISTRO_VOID
+    EPM_DISTRO_OPENSUSE
 } epm_distro_t;
 
 typedef enum {
@@ -23,15 +22,15 @@ typedef enum {
 epm_status_t epm_init(void);
 epm_distro_t epm_get_distro(void);
 
-epm_status_t epm_install_void(const char *void_file);
+
+epm_status_t epm_install_atom(const char *atom_file);
 epm_status_t epm_remove(const char *package_name);
 epm_status_t epm_list(void);
 
 const char *epm_strerror(epm_status_t status);
 const char *epm_distro_name(epm_distro_t distro);
 
-#endif /* EPM_BACKEND_H */
+#endif
 
 
 // There isn't much here yet. This is mainly vibe coded to have a semi functioning Backend & frontend connection. This may be the most vibe coded thing ever tho. "Latest commit: What the fuck did i just write" - Kenraali. 
-
