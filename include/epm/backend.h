@@ -2,21 +2,36 @@
 #define EPM_BACKEND_H
 
 typedef enum {
+    EPM_DISTRO_UNKNOWN = 0,
+    EPM_DISTRO_ARCH,
+    EPM_DISTRO_DEBIAN,
+    EPM_DISTRO_FEDORA,
+    EPM_DISTRO_OPENSUSE,
+    EPM_DISTRO_VOID
+} epm_distro_t;
+
+typedef enum {
     EPM_OK = 0,
-    EPM_ERR_NOT_FOUND,
-    EPM_ERR_DOWNLOAD,
-    EPM_ERR_CHECKSUM,
-    EPM_ERR_EXTRACT,
-    EPM_ERR_IO,
-    EPM_ERR_INTERNAL
+    EPM_ERR_UNKNOWN,
+    EPM_ERR_UNSUPPORTED_DISTRO,
+    EPM_ERR_INVALID_PACKAGE,
+    EPM_ERR_DEPENDENCY,
+    EPM_ERR_PERMISSION,
+    EPM_ERR_EXECUTION
 } epm_status_t;
 
-epm_status_t epm_install(const char *package);
-epm_status_t epm_remove(const char *package);
+epm_status_t epm_init(void);
+epm_distro_t epm_get_distro(void);
+
+epm_status_t epm_install_void(const char *void_file);
+epm_status_t epm_remove(const char *package_name);
 epm_status_t epm_list(void);
 
 const char *epm_strerror(epm_status_t status);
+const char *epm_distro_name(epm_distro_t distro);
 
-#endif 
+#endif /* EPM_BACKEND_H */
 
-// There isn't much here yet. This is mainly vibe coded to have a semi functioning Backend & frontend connection. This may be the most vibe coded thing ever tho. - Kenraali. 
+
+// There isn't much here yet. This is mainly vibe coded to have a semi functioning Backend & frontend connection. This may be the most vibe coded thing ever tho. "Latest commit: What the fuck did i just write" - Kenraali. 
+
