@@ -1,0 +1,6 @@
+{
+  "name": "hello",
+  "version": "1.0.0",
+  "prefix": "/",
+  "description": "Example package for ElectronPM"
+}

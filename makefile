@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -02 -Iinclude
+CFLAGS = -Wall -Wextra -O2 -std=c11 -Iinclude
 
 TARGET = electronpm
 
@@ -12,6 +12,7 @@ src/backend/install.c \
 src/backend/remove.c \
 src/backend/list.c \
 src/backend/db.c \
+src/backend/atom.c \
 src/common/fs.c \
 src/common/util.c \
 src/common/logging.c \
@@ -19,7 +20,9 @@ src/common/logging.c \
 all: $(TARGET)
 
 $(TARGET): $(SRC)
-$(CC) $(CFLAGS) $(SRC) -o $(TARGET)
+	$(CC) $(CFLAGS) $(SRC) -o $(TARGET)
 
 clean:
-rm -f $(TARGET) *.o
+	rm -f $(TARGET) *.o
+
+.PHONY: all clean
