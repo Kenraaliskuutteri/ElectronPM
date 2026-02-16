@@ -18,7 +18,10 @@ electronpm --version
 You are able to install ElectronPM on any distro via running this command in your terminal:
 ```
 git clone https://github.com/Kenraaliskuutteri/ElectronPM.git
+cd ElectronPM
+make
 ```
+Current version is not yet for use. (Testing Phase)
 More options will be soon available.
 
 # Contributing to ElectronPM
