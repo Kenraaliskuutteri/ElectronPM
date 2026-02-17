@@ -1,6 +1,6 @@
 {
-  "name": "hello",
+  "name": "termtimer",
   "version": "1.0.0",
-  "prefix": "/",
-  "description": "Example package for ElectronPM"
+  "prefix": "termtimer",
+  "description": "A Terminal based ASCII Timer - Example package for ElectronPM"
 }
