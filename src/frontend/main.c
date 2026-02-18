@@ -13,6 +13,7 @@ static void help(void) {
         "  electronpm install <file>.atom\n"
         "  electronpm remove <package>\n"
         "  electronpm list\n"
+        "  electronpm ascii\n"
         "  electronpm --help\n"
         "  electronpm --version\n\n"
         "Env:\n"
@@ -69,10 +70,18 @@ int main(int argc, char **argv) {
         return 0;
     }
 
+    if (!strcmp(argv[1], "electronpm ascii")) {
+printf("███████╗██╗     ███████╗ ██████╗████████╗██████╗  ██████╗ ███╗   ██╗██████╗ ███╗   ███╗\n");
+printf("██╔════╝██║     ██╔════╝██╔════╝╚══██╔══╝██╔══██╗██╔═══██╗████╗  ██║██╔══██╗████╗ ████║\n");
+printf("█████╗  ██║     █████╗  ██║        ██║   ██████╔╝██║   ██║██╔██╗ ██║██████╔╝██╔████╔██║\n");
+printf("██╔══╝  ██║     ██╔══╝  ██║        ██║   ██╔══██╗██║   ██║██║╚██╗██║██╔═══╝ ██║╚██╔╝██║\n");
+printf("███████╗███████╗███████╗╚██████╗   ██║   ██║  ██║╚██████╔╝██║ ╚████║██║     ██║ ╚═╝ ██║\n");
+printf("╚══════╝╚══════╝╚══════╝ ╚═════╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝     ╚═╝\n");
+        printf("Welcome to ElectronPM!\n");
+        return 0;
+    }
+
     fprintf(stderr, "unknown command: %s\n", argv[1]);
     help();
     return 2;
 }
-
-
-// hey kenraali so i revamped it so yeah sorry
