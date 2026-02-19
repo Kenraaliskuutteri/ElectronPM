@@ -1,5 +1,7 @@
 # ElectronPM
-ElectronPM is an universal package manager created to be able to use (almost) every package across all Linux™ Distributions.
+ElectronPM is an package manager made to get Any package installed across multiple Linux™ Distributions. It Works by converting .atom files to a file firmat supported by your Distributions. For example .deb .
+
+As of right now, the first version is to have support For Debian/Ubuntu and the distro's based off them. Additionally support is included for Fedora, Arch and OpenSUSE.
 
 # How to use?
 The available commands to be used in Electron will be;
@@ -9,6 +11,8 @@ electronpm install <file>
 electronpm remove <package>
 
 electronpm list
+
+electronpm ascii
 
 electronpm --help
 
