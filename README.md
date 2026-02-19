@@ -1,5 +1,5 @@
 # ElectronPM
-ElectronPM is an package manager made to get Any package installed across multiple Linux™ Distributions. It Works by converting .atom files to a file firmat supported by your Distributions. For example .deb .
+ElectronPM is an package manager made to get Any package installed across multiple Linux™ Distributions. It Works by converting .atom files to a file format supported by your Distributions. For example .deb .
 
 As of right now, the first version is to have support For Debian/Ubuntu and the distro's based off them. Additionally support is included for Fedora, Arch and OpenSUSE.
 
